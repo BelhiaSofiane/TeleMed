@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import symptomsData from '../data/data';
 import { OpenAI } from 'openai';
+import Diagnostic from './Diagnostic';
 
 // Get the API key from environment variables
 const openaiApiKey = import.meta.env.VITE_OPENAI_API_KEY;
@@ -27,7 +28,7 @@ const Home = () => {
 
   async function getDiagnosis() {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", 
+      model: "gpt-4-turbo", 
       messages: [
         { 
           role: "system", 
@@ -70,7 +71,7 @@ const Home = () => {
 
   return (
     <div className='symptoms-container'>
-      <div className="dropdown" onClick={toggleDropDown}>
+      <div className="dropdown" onMouseEnter={toggleDropDown} onMouseLeave={toggleDropDown}>
         <span>Select a Symptom</span>
         {isOpen && (
           <div className="dropdown-menu">
@@ -113,7 +114,7 @@ const Home = () => {
             <button onClick={() => deleteSymptom(item)}>x</button>)
           </div>
       ))}
-      <h1>{diagnosis}</h1>
+      <Diagnostic diagnosis={diagnosis} />
       <button onClick={getDiagnosis}>Get Diagnosis</button>
     </div>
   );
