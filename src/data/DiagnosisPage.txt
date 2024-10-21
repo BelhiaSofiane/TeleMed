@@ -1,0 +1,13 @@
+Diagnosis Page
+Symptom Checker:
+
+A clean, interactive form where users select symptoms from drop-downs or checkboxes.
+Optional fields to add travel history, underlying conditions, and medications.
+Submit Button: "Analyze Symptoms"
+Results Section (Post-Diagnosis):
+
+Shows a possible diagnosis or next steps (e.g., "It seems like you may have XYZ. We recommend seeing a specialist.")
+Suggest nearby clinics/hospitals based on user location.
+Additional Info:
+
+A collapsible panel where users can add more information (e.g., recent travel to tropical areas, family history).

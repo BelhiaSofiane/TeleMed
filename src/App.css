@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+select {
+  display: block;
+  margin: 0 auto;
+}
+
+nav .nav-right a {
+  margin-right: 20px;
+}
+
+.symptoms-container {
+  background-color: gray;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: 1000;
+  width: 200px;
+}
+
+.dropdown-option {
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Nested Dropdown Styles */
+.nested-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  left: 100%; /* Position to the right of the category */
+  top: 0; /* Center it vertically with respect to the hovered option */
+  min-width: 150px; /* Set a minimum width for nested options */
+}
+
+.nested-option {
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nested-option:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 10px;
+  z-index: 1001;
+  top: 100%; /* Position below the dropdown */
+  left: 0; /* Align with the dropdown */
+  width: 200px; /* Adjust width as needed */
+  max-height: 200px; /* Limit height for better usability */
+  overflow-y: auto; /* Scroll if content exceeds height */
+}

@@ -1,0 +1,27 @@
+
+Homepage
+Header:
+
+Logo (Blue + White color scheme, with a subtle medical symbol like a stethoscope or cross)
+Navigation: "Home," "How It Works," "For Patients," "For Students," "FAQs," "Contact"
+Login/Signup Button (Top right)
+Hero Section:
+
+Large, clean image of a doctor/patient or medical iconography.
+Headline: "Get Your First Diagnosis in Minutes."
+Subheadline: "Enter your symptoms, get insights, and find the right care."
+Call to Action: "Start Your Diagnosis" button
+How It Works:
+
+Simple 3-4 step infographic (e.g., "Describe Your Symptoms," "Add More Information," "Get Recommendations," "Find Nearest Healthcare")
+Features Section:
+
+Highlight key features:
+Personalized Diagnosis: Tailored to your input
+Expert Guides: Backed by medical professionals
+Location-based Suggestions: Nearest hospitals/clinics
+Travel History Input: Add recent travel information for accurate results
+Footer:
+
+Links to Privacy Policy, Terms of Service, Social Media Icons
+A disclaimer about the app not being a substitute for professional medical advice.
