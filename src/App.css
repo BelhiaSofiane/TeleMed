@@ -18,6 +18,10 @@ nav {
   justify-content: space-between;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 select {
   display: block;
   margin: 0 auto;
@@ -25,6 +29,7 @@ select {
 
 nav .nav-right a {
   margin-right: 20px;
+  color: white;
 }
 
 .symptoms-container {
