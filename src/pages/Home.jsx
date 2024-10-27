@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import symptomsData from '../data/data';
 import { OpenAI } from 'openai';
 import Diagnostic from './Diagnostic';
+import Loading from '../components/Loading';
 
 // Get the API key from environment variables
 const openaiApiKey = import.meta.env.VITE_OPENAI_API_KEY;
@@ -20,6 +21,7 @@ const Home = () => {
   const [hoveredSymptom, setHoveredSymptom] = useState(null);
   const [selectedSymptoms, setSelectedSymptoms] = useState([])
   const [diagnosis, setDiagnosis] = useState('')
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     console.log(selectedSymptoms)
@@ -27,6 +29,7 @@ const Home = () => {
   
 
   async function getDiagnosis() {
+    setLoading(true)
     const response = await openai.chat.completions.create({
       model: "gpt-4-turbo", 
       messages: [
@@ -44,6 +47,7 @@ const Home = () => {
 
     console.log("Response from OpenAI:", response);
     setDiagnosis(response.choices[0].message.content)
+    setLoading(false)
   }
 
 
@@ -70,6 +74,10 @@ const Home = () => {
   }
 
   return (
+
+    loading 
+    ? <Loading /> 
+    :(
     <div className='symptoms-container'>
       <div className="dropdown" onMouseEnter={toggleDropDown} onMouseLeave={toggleDropDown}>
         <span>Select a Symptom</span>
@@ -116,7 +124,7 @@ const Home = () => {
       ))}
       <Diagnostic diagnosis={diagnosis} />
       <button onClick={getDiagnosis}>Get Diagnosis</button>
-    </div>
+    </div>)
   );
 };
 
